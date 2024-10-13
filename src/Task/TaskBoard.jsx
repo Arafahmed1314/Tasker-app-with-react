@@ -2,7 +2,7 @@ import { useState } from "react";
 import SearchTask from "./SearchTask";
 import TaskAction from "./TaskAction";
 import TaskList from "./TaskList";
-import AddTaskModal from "../../../rnext/src/task/AddTaskModal";
+import AddTaskModel from "./AddTaskModel";
 
 export default function TaskBoard() {
   const defaultTask = {
@@ -76,7 +76,7 @@ export default function TaskBoard() {
   return (
     <section className="mb-20" id="tasks">
       {showAddModal && (
-        <AddTaskModal
+        <AddTaskModel
           taskToUpdate={taskToUpdate}
           onSave={handleAddEditTask}
           onCloseClick={handleCloseClick}
